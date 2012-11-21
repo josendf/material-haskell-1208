@@ -1,0 +1,37 @@
+	Sun Jul 31 08:50 2011 Time and Allocation Profiling Report  (Final)
+
+	   Exercise02.exe +RTS -sstderr -p -RTS
+
+	total time  =        0.00 secs   (0 ticks @ 20 ms)
+	total alloc =     758,380 bytes  (excludes profiling overheads)
+
+COST CENTRE                    MODULE               %time %alloc
+
+getRecursiveContents           Directory              0.0   67.4
+main                           Main                   0.0   32.1
+
+
+                                                                                               individual    inherited
+COST CENTRE              MODULE                                               no.    entries  %time %alloc   %time %alloc
+
+MAIN                     MAIN                                                   1           0   0.0    0.0     0.0  100.0
+ main                    Main                                                 296          22   0.0   32.1     0.0   99.7
+  formatSmry             Main                                                 305           1   0.0    0.1     0.0    0.1
+  simpleFind             Main                                                 297           1   0.0    0.1     0.0   67.5
+   getRecursiveContents  Directory                                            298          45   0.0   67.4     0.0   67.4
+ CAF:main6               Main                                                 290           1   0.0    0.0     0.0    0.0
+ CAF:main7               Main                                                 289           1   0.0    0.0     0.0    0.0
+  main                   Main                                                 304           0   0.0    0.0     0.0    0.0
+ CAF:main8               Main                                                 288           1   0.0    0.0     0.0    0.0
+ CAF:main9               Main                                                 287           1   0.0    0.0     0.0    0.0
+  main                   Main                                                 300           0   0.0    0.0     0.0    0.0
+ CAF:formatSmry1         Main                                                 286           1   0.0    0.0     0.0    0.0
+  formatSmry             Main                                                 306           0   0.0    0.0     0.0    0.0
+ CAF                     GHC.Show                                             280           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.FD                                     216           2   0.0    0.1     0.0    0.1
+ CAF                     GHC.IO.Encoding.CodePage                             188           1   0.0    0.0     0.0    0.0
+ CAF:a_rVf               Directory                                            181           1   0.0    0.0     0.0    0.0
+ CAF:lvl_rVd             Directory                                            180           1   0.0    0.0     0.0    0.0
+  getRecursiveContents   Directory                                            302           0   0.0    0.0     0.0    0.0
+ CAF                     System.FilePath.Windows                              174           1   0.0    0.0     0.0    0.0
+ CAF                     System.Win32.Types                                   170           2   0.0    0.0     0.0    0.0

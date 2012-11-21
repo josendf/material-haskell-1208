@@ -1,0 +1,16 @@
+[Project ID]
+Signature=UE Proj: v.1
+[Project Information]
+Use Relative Directory=1
+Relative to Project File=1
+Include Sub Directories=1
+Project Tagfile=
+Project Wordfile=
+Filter=
+Create Tagfile=0
+[Files]
+0=Tutorial1.hs
+1=Library.hs
+2=Tutorial2.hs
+3=Sample1.txt
+4=Sample2.txt

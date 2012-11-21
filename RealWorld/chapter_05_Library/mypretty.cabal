@@ -1,0 +1,66 @@
+-- A package description begins with a series of global properties, which apply 
+-- to every library and executable in the package
+-- Package names must be unique. If you create and install a package that has 
+-- the same name as a package already present on your system, GHC will 
+-- get very confused.
+
+Name:          mypretty
+Version:       0.1
+
+
+-- The global properties include a substantial amount of information 
+-- that is intended for human readers, not Cabal itself.
+-- As the Description field indicates, a field can span multiple lines, 
+-- provided they're indented.
+
+Synopsis:      My pretty printing library, with JSON support 
+Description:
+    A simple pretty printing library that illustrates how to develop a 
+    Haskell library.
+Author:       Real World Haskell
+Maintainer:   nobody@realworldhaskell.org
+
+
+-- Most Haskell packages are licensed under the BSD license, which 
+-- Cabal calls BSD3.
+
+License:       BSD3
+License-File:  LICENSE 
+
+
+-- The features supported by successive versions of Cabal evolve over 
+-- time, so it's wise to indicate what versions of Cabal we expect to be
+-- compatible with.
+
+Cabal-Version: >= 1.2
+
+-- To describe an individual library within a package, we write a library 
+-- section.
+-- The use of indentation here is significant; the contents of a section 
+-- must be indented
+
+-- The Exposed-Modules field contains a list of modules that should be 
+-- available to users of this package.
+-- An optional field, Other-Modules, contains a list of internal modules.
+-- These are required for this library to function, but will not 
+-- be visible to users.
+
+
+-- The Build-Depends field contains a comma-separated list of packages 
+-- that our library requires to build.
+-- For each package, we can optionally specify the range of versions with
+-- which this library is known to work.
+-- The base package contains many of the core Haskell  
+-- modules, such as the Prelude, so it's effectively always required.
+
+-- We don't have to guess or do any research to establish which packages
+-- we depend on. If we try to build our package without a Build-
+-- Depends field, compilation will fail with a useful error message.
+
+library
+    Exposed-Modules: Prettify 
+                     PrettyJSON 
+                     SimpleJSON 
+
+    Build-Depends:   base >= 2.0 
+
