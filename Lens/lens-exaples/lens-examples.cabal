@@ -1,0 +1,20 @@
+-- --*-- coding: utf-8 --*--
+name:                lens-examples
+version:             0.1.0.0
+description:         Haskell lens examples
+synopsis:            Haskell lens examples
+license:             MIT
+license-file:        LICENSE
+author:              jedf@jedf.com
+maintainer:          jedf@jedf.com
+category:            Examples
+build-type:          Simple
+cabal-version:       >= 1.10
+
+executable lens-examples
+  default-language:  Haskell2010
+  main-is:           Main.hs  
+  hs-source-dirs:    src
+  ghc-options:       -Wall
+  build-depends:      base > 4
+                     ,lens > 4
