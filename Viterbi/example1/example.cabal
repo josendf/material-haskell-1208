@@ -1,0 +1,21 @@
+-- --*-- coding: utf-8 --*--
+name:                viterbi-example
+version:             0.1.0.0
+synopsis:            Viterbi algorithm examples.
+description:         Viterbi algorithm examples.
+license:             MIT
+license-file:        LICENSE
+author:              jedf
+maintainer:          jedf@jedf.com
+category:            Math
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable viterbi-example
+  default-language:  Haskell2010
+  ghc-options:       -Wall
+  hs-source-dirs:    src
+  main-is:           Main.hs
+  build-depends:     base >= 4.6 && < 5
+                     , containers >= 0.5
+                     , logfloat >= 0.12
