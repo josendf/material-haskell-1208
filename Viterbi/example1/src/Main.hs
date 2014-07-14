@@ -55,9 +55,6 @@ newtype VResult         = VResult (State, Probability, [State])
 allStates :: [State]
 allStates = [(minBound :: State) ..]
 
-allObs :: [Observation]
-allObs = [(minBound :: Observation) ..]
-
 stepProb :: Step -> Int -> StateProb
 stepProb (Step x) y = x M.! y
 
@@ -172,15 +169,6 @@ main = do
   putStrLn "Start..."
 
 {-
-  The patient visits three days in a row and the doctor discovers that on the
-  first day she feels normal, on the second day she feels cold, on the third day
-  she feels dizzy. The doctor has a question: what is the most likely sequence of
-  health condition of the patient that would explain these observations?
-  This is answered by the Viterbi algorithm.
--}
-
-
-{-
  Start Probability represents the doctor's belief about which state the
  Hidden Markov Model is in when the patient first visits (all he knows
  is that the patient tends to be healthy).
@@ -209,7 +197,15 @@ main = do
                                                 (Cold,   0.3),
                                                 (Dizzy,  0.6)])]
 
-  let result = viterbi allObs allStates startProbs transitionProbs emissionProbs
+{-
+  The patient visits three days in a row and the doctor discovers that on the
+  first day she feels normal, on the second day she feels cold, on the third day
+  she feels dizzy. The doctor has a question: what is the most likely sequence of
+  health condition of the patient that would explain these observations?
+  This is answered by the Viterbi algorithm.
+-}
+  let obs = [Normal, Cold, Dizzy]
+  let result = viterbi obs allStates startProbs transitionProbs emissionProbs
 
   putStrLn ""
   print result
