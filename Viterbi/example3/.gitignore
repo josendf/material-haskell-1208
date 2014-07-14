@@ -1,0 +1,8 @@
+dist
+bin
+cabal-dev
+*.o
+*.hi
+*.chi
+*.chs.h
+TAGS
